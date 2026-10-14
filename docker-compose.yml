@@ -20,7 +20,7 @@ services:
 
   postgres:
     image: postgres:16
-    container_name: stock-tracker-database
+    container_name: stock-tracker-database-docker
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -38,7 +38,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: stock-tracker-app-redis
+    container_name: stock-tracker-app-redis-docker
     ports:
       - "6380:6379"
     volumes:
