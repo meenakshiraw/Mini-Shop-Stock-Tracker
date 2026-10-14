@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Inventory</title>
+    
+<link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+    <div class="container">
+<header class="hero">
+      <div><p class="eyebrow">INVENTORY MANAGEMENT</p><h1>Mini Shop Stock Tracker</h1><p class="muted">A simple way to manage your shop inventory.</p></div>
+  
+    </header>
+
+    <section class="stats" aria-label="Inventory summary">
+      <article class="stat"><span>Total added</span><strong id="totalAdded">0</strong></article>
+      <article class="stat"><span>Total sold</span><strong id="totalSold">0</strong></article>
+      <article class="stat"><span>Remaining</span><strong id="remaining">0</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading"><div><h2>Stock details</h2><p class="muted">Current available quantity for each product.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Product</th><th>Total</th><th>Sold</th><th>Left</th></tr></thead><tbody id="stockRows"><tr><td colspan="4">Loading inventory…</td></tr></tbody></table></div>
+    </section>
+<section class="two-col">
+      <form id="stockForm" class="panel">
+        <h2>Add a product / stock</h2>
+        <label for="productName">Product name</label><input id="productName" name="product_name" placeholder="e.g. Milk" required maxlength="120">
+        <label for="stockQuantity">Quantity</label><input id="stockQuantity" name="quantity" type="number" min="1" step="1" value="10" required>
+        <label for="stockDate">Date added</label><input id="stockDate" name="date" type="date" required>
+        <button type="submit">+ Add stock</button>
+      </form>
+      <form id="saleForm" class="panel">
+        <h2>Record a sale</h2>
+        <label for="saleProduct">Product</label><select id="saleProduct" name="product_id" required><option value="">Loading products…</option></select>
+        <label for="saleQuantity">Quantity sold</label><input id="saleQuantity" name="quantity" type="number" min="1" step="1" value="1" required>
+        <label for="saleDate">Sale date</label><input id="saleDate" name="date" type="date" required>
+        <button type="submit">Record sale</button>
+      </form>
+    </section>
+
+    
+
+</head>
+<body>
+    
+</body>
+</html>
