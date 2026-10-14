@@ -1,9 +1,7 @@
 
 services:
   backend:
-    build:
-      context: .
-      dockerfile: meenakshirawat/stock-tracker-backend:latest
+    image: meenakshirawat/stock-tracker-backend
     container_name: stock-tracker-backend
     ports:
       - "3000:3000"
